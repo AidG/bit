@@ -26,6 +26,12 @@ CounterService.increment=function(input,onComplete){
   return onComplete(null,{ count: CounterService.count });
 }
 
+CounterService.sqroot=function(input,onComplete){
+  CounterService.count=Math.sqrt(CounterService.count);
+  return onComplete(null,{ count: CounterService.count });
+}
+
+
 //Define a reset function for our service
 CounterService.reset=function(input,onComplete){
   CounterService.count=0;
